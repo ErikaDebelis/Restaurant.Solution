@@ -9,7 +9,7 @@
 * _C#_
 * _MySQL_
 * _Git BASH_
-* _.NET_
+* _ASP .NET CORE MVC_
 
 ## Setup/Installation Requirements
 
@@ -18,6 +18,11 @@
 3. Run "dotnet run" in the git BASH terminal to install dependencies, minify the code, and run the project in the terminal.
     ``$ dotnet run``
 4. View the website by visiting localhost:5000/ in a new web browser( such as google chrome) tab!
+#### _To run tests_ ####
+1. To run/review tests navigate to the Bakery.Tests folder
+2. Run "dotnet test" in the terminal to create and launch the application!
+    ``$dotnet test``
+
 
 ## Bugs
 
