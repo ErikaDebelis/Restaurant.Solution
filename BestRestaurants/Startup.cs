@@ -16,7 +16,7 @@ namespace BestRestaurants
         .SetBasePath(env.ContentRootPath)
         .AddJsonFile("appsettings.json");
     Configuration = builder.Build();
-    }   
+    }
 
     public IConfigurationRoot Configuration { get; }
 
@@ -40,7 +40,7 @@ namespace BestRestaurants
       });
 
       app.UseStaticFiles();
-      
+
       app.Run(async (context) =>
       {
         await context.Response.WriteAsync("Error: request failed- check your GET POST");

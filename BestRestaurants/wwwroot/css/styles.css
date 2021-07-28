@@ -1,0 +1,36 @@
+.bestrestaurants_img {
+  background-image: url("https://www.redwoodcity.org/home/showpublishedimage/16625/637205896262230000");
+  height: 225px;
+  width: 225px;
+  margin: 0 auto;
+  align-content: center;
+  border-radius: 20px;
+}
+
+body, html {
+  background-image: url("https://bigseventravel.com/wp-content/uploads/2019/10/Casa-San-Isidro-Bogota.jpg");
+  background-repeat: no-repeat;
+  background-position: relative;
+  background-size: cover;
+  overflow: auto;
+  background-position-x: 0;
+  background-position-y: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: rgba(224, 182, 66, 0.815);
+  padding: 30px 10px;
+  border-radius: 30px;
+  margin-top: 15px;
+  opacity: 0.35;
+}
+
+h1, h2, h3 {
+  font-family: 'Romanesco', cursive;
+  text-align: center;
+  font-style: italic;
+}
