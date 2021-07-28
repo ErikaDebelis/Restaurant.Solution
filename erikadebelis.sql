@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.19, for Win64 (x86_64)
 --
--- Host: localhost    Database: restaurant
+-- Host: localhost    Database: best_restaurants
 -- ------------------------------------------------------
 -- Server version	8.0.19
 
@@ -54,4 +54,4 @@ CREATE TABLE `restaurants` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-07-28 13:12:42
+-- Dump completed on 2021-07-28 13:44:09
