@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace BestRestaurants.Controllers
 {
-  public class CuisineController : Controller
+  public class CuisinesController : Controller
   {
     private readonly BestRestaurantsContext _db;
 
@@ -55,7 +55,7 @@ namespace BestRestaurants.Controllers
 
     public ActionResult Delete(int id)
     {
-      Cuisine thisCuisine = __db.Cuisines.FirstOrDefault(cuisine => cuisine.CuisineId == id);
+      Cuisine thisCuisine = _db.Cuisines.FirstOrDefault(cuisine => cuisine.CuisineId == id);
       return View(thisCuisine);
     }
 

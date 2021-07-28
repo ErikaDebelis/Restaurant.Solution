@@ -19,18 +19,24 @@ body, html {
   width: 100%;
   margin: 0;
   padding: 0;
+  font-family: 'Courgette', cursive;
+  size: 40rem;
 }
 
 .container {
-  background-color: rgba(224, 182, 66, 0.815);
+  background: rgb(103,9,9);
+  background: linear-gradient(0deg, rgba(103,9,9,0.6283555658591562) 0%, rgba(253,187,45,0.8524452017134979) 100%);
   padding: 30px 10px;
   border-radius: 30px;
   margin-top: 15px;
-  opacity: 0.35;
 }
 
+a {
+  color: rgb(29, 8, 8);
+}
 h1, h2, h3 {
-  font-family: 'Romanesco', cursive;
+  font-family: 'Courgette', cursive;
   text-align: center;
   font-style: italic;
+  color: rgb(51, 17, 4);
 }

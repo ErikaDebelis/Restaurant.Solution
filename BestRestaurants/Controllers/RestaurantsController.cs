@@ -23,7 +23,7 @@ namespace BestRestaurants.Controllers
     }
     public ActionResult Create ()
     {
-      ViewBag.CuisineId = new SelectList(_db.Cuisines, "CuisineId", "Name");
+      ViewBag.CuisineId = new SelectList(_db.Cuisines, "CuisineId", "CuisineName");
       return View();
     }
     [HttpPost]
@@ -41,7 +41,7 @@ namespace BestRestaurants.Controllers
     public ActionResult Edit(int id)
     {
       Restaurant thisRestaurant = _db.Restaurants.FirstOrDefault(restaurant => restaurant.RestaurantId == id);
-      ViewBag.CuisineId = new SelectList(_db.Cuisines, "CuisineId", "Name");
+      ViewBag.CuisineId = new SelectList(_db.Cuisines, "CuisineId", "CuisineName");
       return View(thisRestaurant);
     }
     [HttpPost]
@@ -53,13 +53,13 @@ namespace BestRestaurants.Controllers
     }
     public ActionResult Delete(int id)
     {
-      Restaurant thisRestaurant = _db.Restaurants.FirstOtDefault(restaurant => restaurant.RestaurantId == id);
+      Restaurant thisRestaurant = _db.Restaurants.FirstOrDefault(restaurant => restaurant.RestaurantId == id);
       return View(thisRestaurant);
     }
     [HttpPost, ActionName("Delete")]
     public ActionResult DeleteConfired(int id)
     {
-      Restaurant thisRestaurant = _db.Restaurants.FirstOtDefault(restaurant => restaurant.RestaurantId == id);
+      Restaurant thisRestaurant = _db.Restaurants.FirstOrDefault(restaurant => restaurant.RestaurantId == id);
       _db.Restaurants.Remove(thisRestaurant);
       _db.SaveChanges();
       return RedirectToAction("Index");
