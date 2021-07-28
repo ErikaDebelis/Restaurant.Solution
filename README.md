@@ -1,8 +1,8 @@
-# (Application Name)
+# Restaurant Organizer
 
-(Brief Description of Application)
+restaurant database
 
-#### Authored by Erika Debelis
+#### Authored by Erika Debelis, Jenn Bordon, and Godfrey Owidi
 
 ## Technologies Used
 
@@ -15,19 +15,22 @@
 
 ## Setup/Installation Requirements
 
-1. Download or clone the https://github.com/ErikaDebelis/(PROJECT NAME) to your local machine
-2. Open git BASH terminal and navigate to the (CODE FOLDER NAME) of the directory
+1. Download or clone the https://github.com/ErikaDebelis/Restaurant.Solution to your local machine
+
+2. Open git BASH terminal and navigate to the Restaurant.Solution of the directory
+
 3. Run "dotnet restore" in the git BASH terminal to install dependencies
     ``$ dotnet restore``
-4. CREATE APPSETTINGS.JSON FILE IN THE ROOT DIRECTORY AND ADD THE FOLLOWING CODE: 
+
+4. Create your own version of the database by importing the erikadebelis.sql file from the repo with MySQL Workbench.
+
+5. Create appsettings.json file in the root directory of Restaurant.Solution and add the following code to the file:
 ``{``
   ``"ConnectionStrings": {``
       ``"DefaultConnection": "Server=localhost;Port=3306;database={YOUR_SCHEMA_NAME};uid={YOUR_USERNAME_NAME};pwd={YOUR_PASSWORD};"``
   ``}``
-}``
-REMOVE AND FILL IN YOUR SCHEMA, USERNAME, AND PASSWORD- (DO NOT INCLUDE THE CURLY BRACKETS)
-
-5. CREATE DATABASE USING MYSQL WORKBENCH BY IMPORTING .SQL FILE FROM REPO
+``}``
+Be sure to remove and fill in the schema new schema name (if you made one during the import), username for MySQL, and MySQL password _Do not include the curly brackets in your code snippet of appsettings.json_
 
 6. Run "dotnet run" in the git BASH terminal to  minify the code, and run the project in the terminal.
     ``$ dotnet watch run``
