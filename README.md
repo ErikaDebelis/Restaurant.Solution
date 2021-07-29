@@ -24,16 +24,16 @@ restaurant database
 
 4. Create your own version of the database by importing the erikadebelis.sql file from the repo with MySQL Workbench.
 
-5. Create appsettings.json file in the root directory of Restaurant.Solution and add the following code to the file:
+5. Create appsettings.json file in the root directory of Restaurant.Solution and add the following code to the file: ``touch appsettings.json``
 ```
 {
   "ConnectionStrings":
   {
-    "DefaultConnection": "Server=localhost;Port=3306;database={YOUR_SCHEMA_NAME};uid={YOUR_USERNAME_NAME};pwd={YOUR_PASSWORD};"
+    "DefaultConnection": "Server=localhost;Port=3306;database=best_restaurants;uid={YOUR_USERNAME_NAME};pwd={YOUR_PASSWORD};"
   }
 }
 ```
-Be sure to remove and fill in the schema new schema name (if you made one during the import), username for MySQL, and MySQL password _Do not include the curly brackets in your code snippet of appsettings.json_
+Be sure to remove the ``{YOUR_USERNAME_NAME}`` and ``{YOUR_PASSWORD}`` and fill in the the code snippet with your username for MySQL, and MySQL password _Do not include the curly brackets in your code snippet of appsettings.json_
 
 6. Run "dotnet run" in the git BASH terminal to  minify the code, and run the project in the terminal.
     ``$ dotnet watch run``

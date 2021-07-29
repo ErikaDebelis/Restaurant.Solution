@@ -29,7 +29,7 @@ namespace BestRestaurants.Controllers
     [HttpPost]
     public ActionResult Create(string cuisineName, string RestaurantName, int cuisineId)
     {
-      if (cuisineName == null)//if were not making a new cuisine
+      if (cuisineName == null) //if were not making a new cuisine
       {
         Restaurant newRestaurant = new Restaurant();
         newRestaurant.RestaurantName = RestaurantName;
