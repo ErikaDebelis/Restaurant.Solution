@@ -10,11 +10,11 @@
 <ul>
   @foreach(Restaurant restaurant in Model)
   {
-      <li>@Html.ActionLink($"{restaurant.RestaurantName}", "Details", new { id = restaurant.RestaurantId }) | @restaurant.Cuisine.CuisineName</li>
+    <li>@Html.ActionLink($"{restaurant.RestaurantName}", "Details", new {id = restaurant.RestaurantId }) | @restaurant.Cuisine.CuisineName</li>
   }
 </ul>
 
-<p>@Html.ActionLink("Add new restaurant", "Create")</p>
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
+<h4>@Html.ActionLink("Add new restaurant", "Create")</h4>
+<h4>@Html.ActionLink("Home", "Index", "Home")</h4>
 
 

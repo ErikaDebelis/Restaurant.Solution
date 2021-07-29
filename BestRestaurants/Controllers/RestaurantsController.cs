@@ -27,10 +27,24 @@ namespace BestRestaurants.Controllers
       return View();
     }
     [HttpPost]
-    public ActionResult Create(Restaurant restaurant)
+    public ActionResult Create(string cuisineName, string RestaurantName)
     {
-      _db.Restaurants.Add(restaurant);
-      _db.SaveChanges();
+      Cuisine newCuisine = new Cuisine();
+      System.Console.WriteLine(newCuisine);
+      newCuisine.CuisineName = cuisineName;
+      _db.Cuisines.Add(newCuisine);
+      System.Console.WriteLine(newCuisine);
+      _db.SaveChanges(); // saves db with cuisine
+      System.Console.WriteLine(newCuisine);
+      // (entity framework core) efcore does have access to id after SaveChanges();
+      
+
+      Restaurant newRestaurant = new Restaurant();
+      newRestaurant.RestaurantName = RestaurantName;
+      newRestaurant.CuisineId = newCuisine.CuisineId; // now we have access to assign our restaurant's cuisineid to the correct cuisineid
+      _db.Restaurants.Add(newRestaurant);
+      _db.SaveChanges(); // saves db with restaurant
+
       return RedirectToAction("Index");
     }
     public ActionResult Details(int id)

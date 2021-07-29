@@ -3,6 +3,10 @@ namespace BestRestaurants.Models
 {
   public class Cuisine
   {
+    public override string ToString()
+    {
+      return $"id: {CuisineId} | name:{CuisineName}";
+    }
     public Cuisine()
     {
       this.Restaurants = new HashSet<Restaurant>();

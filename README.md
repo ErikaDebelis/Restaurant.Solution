@@ -9,7 +9,7 @@ restaurant database
 * _C#_
 * _MySQL_
 * _MySQL Workbench_
-*_.NET 5 SDK_
+* _.NET 5 SDK_
 * _Git BASH_
 * _ASP .NET CORE MVC_
 
@@ -27,8 +27,9 @@ restaurant database
 5. Create appsettings.json file in the root directory of Restaurant.Solution and add the following code to the file:
 ```
 {
-  "ConnectionStrings": {
-      "DefaultConnection": "Server=localhost;Port=3306;database={YOUR_SCHEMA_NAME};uid={YOUR_USERNAME_NAME};pwd={YOUR_PASSWORD};"
+  "ConnectionStrings":
+  {
+    "DefaultConnection": "Server=localhost;Port=3306;database={YOUR_SCHEMA_NAME};uid={YOUR_USERNAME_NAME};pwd={YOUR_PASSWORD};"
   }
 }
 ```
