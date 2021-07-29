@@ -29,28 +29,26 @@ namespace BestRestaurants.Controllers
     [HttpPost]
     public ActionResult Create(string cuisineName, string RestaurantName, int cuisineId)
     {
-      if (cuisineName == null) //if were not making a new cuisine
+      // forgot all this
+      int newCuisineId = cuisineId;
+      
+      if (cuisineName != null)
       {
-        Restaurant newRestaurant = new Restaurant();
-        newRestaurant.RestaurantName = RestaurantName;
-        newRestaurant.CuisineId = cuisineId;
-        _db.Restaurants.Add(newRestaurant);
-        _db.SaveChanges(); // saves db with restaurant
+        // create a new cuisine
+        Cuisine newCuisine = new Cuisine();
+        newCuisine.CuisineName = cuisineName;
+        _db.Cuisines.Add(newCuisine);
+        _db.SaveChanges(); // saves db with new cuisine in cuisines table
+        // (entity framework core) efcore does have access to id after SaveChanges();
+        newCuisineId = newCuisine.CuisineId;
       }
-      else
-      {
-      Cuisine newCuisine = new Cuisine();
-      newCuisine.CuisineName = cuisineName;
-      _db.Cuisines.Add(newCuisine);
-      _db.SaveChanges(); // saves db with new cuisine in cuisines table
-      // (entity framework core) efcore does have access to id after SaveChanges();
-
+      
       Restaurant newRestaurant = new Restaurant();
       newRestaurant.RestaurantName = RestaurantName;
-      newRestaurant.CuisineId = newCuisine.CuisineId; // now we have access to assign our restaurant's cuisineid to the correct cuisineid
+      newRestaurant.CuisineId = newCuisineId;
       _db.Restaurants.Add(newRestaurant);
-      _db.SaveChanges(); // saves db with restaurant
-      }
+      _db.SaveChanges();
+  
       return RedirectToAction("Index");
     }
     public ActionResult Details(int id)
