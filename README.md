@@ -8,7 +8,7 @@ restaurant database
 
 * _C#_
 * _MySQL_
-*_MySQL Workbench_
+* _MySQL Workbench_
 *_.NET 5 SDK_
 * _Git BASH_
 * _ASP .NET CORE MVC_
@@ -25,11 +25,13 @@ restaurant database
 4. Create your own version of the database by importing the erikadebelis.sql file from the repo with MySQL Workbench.
 
 5. Create appsettings.json file in the root directory of Restaurant.Solution and add the following code to the file:
-``{``
-  ``"ConnectionStrings": {``
-      ``"DefaultConnection": "Server=localhost;Port=3306;database={YOUR_SCHEMA_NAME};uid={YOUR_USERNAME_NAME};pwd={YOUR_PASSWORD};"``
-  ``}``
-``}``
+```
+{
+  "ConnectionStrings": {
+      "DefaultConnection": "Server=localhost;Port=3306;database={YOUR_SCHEMA_NAME};uid={YOUR_USERNAME_NAME};pwd={YOUR_PASSWORD};"
+  }
+}
+```
 Be sure to remove and fill in the schema new schema name (if you made one during the import), username for MySQL, and MySQL password _Do not include the curly brackets in your code snippet of appsettings.json_
 
 6. Run "dotnet run" in the git BASH terminal to  minify the code, and run the project in the terminal.

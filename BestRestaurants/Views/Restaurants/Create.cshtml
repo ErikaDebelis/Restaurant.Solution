@@ -10,6 +10,8 @@
     @Html.LabelFor(model => model.RestaurantName)
     @Html.TextBoxFor(model => model.RestaurantName)
     
+    @Html.LabelFor(model => model.Cuisine)
+    @Html.DropDownList("CuisineId")
     <input type="submit" value="Add new restaurant" />
 }
 <p>@Html.ActionLink("Show all restaurants", "Index")</p>
